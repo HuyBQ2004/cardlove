@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Magic Card 2026 ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Satisfy&family=Great+Vibes&family=Quicksand:wght@500;700&family=Lobster&family=Playball&family=Alex+Brush&family=Monoton&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        :root { 
+            --primary: #ff5dae; 
+            --pink-glow: #f98a9b; 
+            --glass: rgb(238, 196, 196); /* Thay đổi glass thành màu tối hơn để tương phản với nền hồng */
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.37); 
+            --border-radius: 20px; 
+            --panel-bg: rgba(192, 111, 135, 0.85); /* Nền panel tối để tương phản, dễ nhìn */
+            --text-color: #ffffff; /* Giữ chữ trắng cho dễ đọc trên nền tối */
+        }
+        
+        body { 
+            margin: 0; padding: 0; font-family: 'Quicksand', sans-serif; 
+            background: #fdfdfd; color: var(--text-color); overflow: hidden;
+            display: flex; flex-direction: column; align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Nền hồng tinh tế hơn với gradient nhạt và hiệu ứng nhẹ nhàng */
+        .galaxy-bg { 
+            position: fixed; inset: 0; z-index: -1; 
+            background: radial-gradient(circle at center, #f1e0de 0%, #f3476f 50%, #f9bfc8 100%); /* Gradient hồng nhạt, tinh tế */
+            animation: pinkGlow 15s ease-in-out infinite; /* Chậm hơn để không chói */
+        }
+        @keyframes pinkGlow {
+            0% { background-position: 0% 50%; opacity: 0.9; }
+            50% { background-position: 100% 50%; opacity: 1; }
+            100% { background-position: 0% 50%; opacity: 0.9; }
+        }
+        .star { 
+            position: absolute; background: rgba(158, 203, 127, 0.7); border-radius: 50%; opacity: 0.5; 
+            animation: twinkle var(--d) infinite alternate, pinkTint 6s ease-in-out infinite; /* Tinh tế hơn */
+            box-shadow: 0 0 8px rgba(96, 239, 196, 0.6); /* Glow nhẹ */
+        }
+        @keyframes twinkle { 
+            0% { opacity: 0.3; transform: scale(0.8); } 
+            100% { opacity: 0.8; transform: scale(1.1); } 
+        }
+        @keyframes pinkTint {
+            0% { background: rgba(255, 240, 245, 0.5); }
+            50% { background: rgba(255, 228, 225, 0.7); }
+            100% { background: rgba(255, 240, 245, 0.5); }
+        }
+
+        /* Hoa rơi theo chuột - Thay đổi thành tông hồng */
+        .mouse-petal { 
+            position: fixed; pointer-events: none; z-index: 9999; font-size: 18px; 
+            user-select: none; animation: petalFall 3s forwards ease-out; 
+            color: #ffc0cb; text-shadow: 0 0 8px #ffd1dc;
+        }
+        @keyframes petalFall { 
+            0% { opacity: 1; transform: translate(0, 0) rotate(0deg); } 
+            100% { opacity: 0; transform: translate(var(--mx), 450px) rotate(720deg); } 
+        }
+
+        .rainbow-text { animation: rainbow 4s linear infinite !important; } 
+        @keyframes rainbow { 
+            0% { color: #ff69b4; text-shadow: 0 0 20px #ff69b4; } 
+            33% { color: #87cefa; text-shadow: 0 0 20px #87cefa; } 
+            66% { color: #ffd700; text-shadow: 0 0 20px #ffd700; } 
+            100% { color: #ff69b4; text-shadow: 0 0 20px #ff69b4; } 
+        }
+
+        /* BAO THƯ VÀ HIỆU ỨNG */
+        #envelope-wrapper { 
+            position: fixed; inset: 0; z-index: 10000; 
+            display: none; flex-direction: column; justify-content: center; align-items: center; 
+            background: radial-gradient(circle, rgba(255, 192, 203, 0.9) 0%, rgba(255, 228, 225, 0.95) 100%); /* Nền bao thư hồng nhạt */
+            backdrop-filter: blur(25px); transition: opacity 1.2s ease; 
+        }
+
+        .instruction-text {
+            color: #fff; text-shadow: 0 0 15px var(--pink-glow);
+            font-family: 'Pacifico', cursive; font-size: 1.6rem;
+            margin-bottom: 50px; animation: glowText 2.2s infinite ease-in-out;
+            pointer-events: none; z-index: 10002;
+        }
+        @keyframes glowText { 
+            0%, 100% { transform: scale(1); opacity: 0.7; } 
+            50% { transform: scale(1.05); opacity: 1; } 
+        }
+
+        .envelope-aura {
+            position: absolute; width: 550px; height: 400px;
+            background: radial-gradient(circle, rgba(255, 240, 245, 0.5) 0%, transparent 80%); /* Aura nhẹ nhàng */
+            border-radius: 50%; animation: auraPulse 3s infinite ease-in-out;
+            z-index: 5; pointer-events: none;
+        }
+        @keyframes auraPulse { 
+            0%, 100% { transform: scale(1); opacity: 0.2; } 
+            50% { transform: scale(1.2); opacity: 0.5; } 
+        }
+
+        .shimmer {
+            position: absolute; pointer-events: none; width: 8px; height: 8px;
+            background: #ffd1dc; border-radius: 50%; box-shadow: 0 0 10px #ffd1dc, 0 0 20px #ffe4e1;
+            animation: shimmerFly 2.2s forwards ease-out; z-index: 10001;
+        }
+        @keyframes shimmerFly { 
+            0% { opacity: 0; transform: translateY(0) scale(0.6); } 
+            20% { opacity: 1; } 
+            100% { opacity: 0; transform: translateY(-200px) translateX(var(--rx)) scale(1.4); } 
+        }
+
+        .envelope { 
+            position: relative; width: 380px; height: 260px; background: #fdfdfd; 
+            border-radius: 0 0 15px 15px; box-shadow: var(--shadow); 
+            cursor: pointer; perspective: 1200px; z-index: 10;
+            animation: floating 4.5s infinite ease-in-out;
+        }
+        @keyframes floating { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-25px); } 
+        }
+
+        .flap { 
+            position: absolute; top: 0; left: 0; width: 0; height: 0; 
+            border-top: 150px solid #ffe4e1; /* Màu hồng nhạt cho flap */
+            border-left: 190px solid transparent; border-right: 190px solid transparent; 
+            transform-origin: top; transition: transform 1s ease; z-index: 40; 
+        }
+        .pocket { 
+            position: absolute; bottom: 0; left: 0; width: 0; height: 0; 
+            border-bottom: 150px solid #fdfdfd; border-left: 190px solid transparent; 
+            border-right: 190px solid transparent; z-index: 30; border-radius: 0 0 15px 15px; 
+        }
+        
+        .card-inside { 
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); 
+            width: 350px; height: 220px; background: #ffffff; border-radius: 15px; 
+            z-index: 20; transition: transform 1.4s ease, opacity 0.6s ease; 
+            display: flex; justify-content: center; align-items: center; 
+            opacity: 0; visibility: hidden; box-shadow: var(--shadow);
+        }
+        
+        .seal { 
+            position: absolute; top: 150px; left: 50%; transform: translate(-50%, -50%); 
+            width: 70px; height: 70px; background: #ff69b4; 
+            border-radius: 50%; z-index: 50; display: flex; align-items: center; justify-content: center; 
+            font-size: 2rem; border: 4px solid #ff1493; box-shadow: var(--shadow); color: #fff; 
+        }
+        
+        .envelope.opened { animation: none !important; }
+        .envelope.opened .flap { transform: rotateX(180deg); z-index: 10; }
+        .envelope.opened .seal { opacity: 0; transform: translate(-50%, -50%) scale(0); transition: opacity 0.5s, transform 0.5s; }
+        .envelope.opened .card-inside { transform: translate(-50%, -260px); height: 500px; z-index: 100; box-shadow: var(--shadow); opacity: 1; visibility: visible; }
+        body.envelope-done #envelope-wrapper { opacity: 0; pointer-events: none; }
+
+        /* Giao diện Main App */
+        .main-app { 
+            max-width: 1300px; width: 95%; display: grid; grid-template-columns: 450px 1fr; gap: 40px; 
+            margin: 30px auto; transition: 0.6s; z-index: 1; height: calc(100vh - 150px);
+            overflow-y: hidden; 
+        }
+
+        body.view-mode .editor-panel, body.view-mode .header { display: none !important; }
+        body.view-mode .main-app { grid-template-columns: 1fr; margin-top: 120px; }
+        body.view-mode:not(.envelope-done) .main-app { visibility: hidden; }
+
+        .panel { 
+            background: var(--panel-bg); /* Nền tối tương phản */
+            backdrop-filter: blur(25px); border-radius: var(--border-radius); 
+            padding: 30px; border: 1px solid rgba(255,255,255,0.12); 
+            overflow-y: auto; height: 100%; box-sizing: border-box; box-shadow: var(--shadow);
+        }
+        .panel::-webkit-scrollbar { width: 8px; }
+        .panel::-webkit-scrollbar-thumb { background: var(--pink-glow); border-radius: 10px; }
+
+        #final-card { 
+            width: 380px; height: 540px; background: white; margin: 0 auto; 
+            border: 12px solid #f8f8f8; position: relative; box-shadow: var(--shadow); 
+            overflow: hidden; background-size: cover; background-position: center; 
+            transition: transform 0.3s ease; border-radius: 15px; 
+        }
+        #final-card:hover { transform: scale(1.02); } 
+        
+        .draggable { position: absolute; cursor: grab; user-select: none; z-index: 10; transform: translate(-50%, -50%); }
+        #card-text { top: 50%; left: 50%; width: 90%; text-align: center; font-size: 1.4rem; color: #333; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        
+        .sticker { width: 85px; height: 85px; background-size: contain; background-repeat: no-repeat; background-position: center; z-index: 15; transition: transform 0.3s; }
+        .sticker:hover { transform: scale(1.1); } 
+        .sticker-emoji { font-size: 55px; display: flex; align-items: center; justify-content: center; }
+
+        .field { margin-bottom: 15px; }
+        label { font-size: 0.8rem; font-weight: bold; display: block; margin-bottom: 6px; color: #ddd; }
+        textarea, select, input { 
+            width: 100%; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); 
+            background: rgba(255,255,255,0.08); font-family: inherit; font-size: 1rem; 
+            box-sizing: border-box; color: white; transition: border 0.3s; 
+        }
+        textarea:focus, select:focus, input:focus { border: 1px solid var(--primary); outline: none; }
+        
+        .lib-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; background: rgba(255,255,255,0.08); padding: 12px; border-radius: 12px; }
+        .stk-item { font-size: 28px; cursor: pointer; transition: transform 0.3s; user-select: none; }
+        .stk-item:hover { transform: scale(1.2) rotate(5deg); } 
+
+        .bg-btn { width: 50px; height: 50px; border-radius: 12px; cursor: pointer; border: 2px solid rgba(255,255,255,0.5); transition: 0.3s; }
+        .bg-btn:hover { transform: scale(1.15); box-shadow: 0 0 15px rgba(255,255,255,0.8); }
+
+        .btn { 
+            width: 100%; padding: 14px; border: none; border-radius: 12px; font-weight: bold; 
+            cursor: pointer; transition: transform 0.3s, background 0.3s; color: white; 
+            text-transform: uppercase; margin-top: 8px; box-shadow: var(--shadow);
+        }
+        .btn:hover { transform: scale(1.05); }
+        .btn-share { background: linear-gradient(135deg, #ff69b4, #ffb6c1); margin-top: 20px; }
+        #qrcode-box { background: white; padding: 12px; border-radius: 12px; display: inline-block; margin-top: 20px; box-shadow: var(--shadow); }
+        #yt-player { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+        
+        @media (max-width: 900px) {
+            body { overflow-y: auto; } 
+            .header h1 { font-size: 1.8rem; letter-spacing: 3px; }
+            .main-app { 
+                display: flex; flex-direction: column; 
+                margin-top: 15px; height: auto; padding-bottom: 80px; gap: 20px;
+                overflow-y: visible; 
+            }
+            #main-card-panel { 
+                order: 1; height: auto; padding: 15px; overflow: visible; 
+                background: transparent; border: none; 
+            }
+            .editor-panel { 
+                order: 2; width: 100%; padding: 20px; height: auto; 
+                overflow-y: visible; 
+            }
+            
+            #final-card { transform: scale(0.95); transform-origin: top center; margin-bottom: -30px; border-width: 8px; }
+            
+            .envelope { transform: scale(0.9); }
+            .envelope-aura { width: 400px; height: 400px; }
+            
+            .instruction-text { font-size: 1.3rem; margin-bottom: 30px; }
+            
+            .stk-item { padding: 10px; font-size: 35px; }
+            input, textarea, select { font-size: 16px; padding: 10px; } 
+            .btn { padding: 12px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    if(window.location.search.includes('msg=')) {
+        document.body.classList.add('view-mode');
+    }
+</script>
+
+<div class="galaxy-bg" id="stars"></div>
+<div id="yt-player"></div>
+<audio id="audio-player"></audio>
+
+<div id="envelope-wrapper">
+    <div class="instruction-text" id="ins-text">✨ Nhấn vào thư để mở phép màu ✨</div>
+    <div class="envelope-aura" id="aura"></div>
+    <div class="envelope" id="env" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="card-inside" id="mini-card">
+            <div style="text-align: center;"><h3 style="margin:0; color:#333; font-family:'Pacifico'">Gửi riêng bạn...</h3></div>
+        </div>
+        <div class="seal">❤️</div>
+        <div class="pocket"></div>
+    </div>
+</div>
+
+<div class="header" style="text-align: center; padding: 20px 0;"><h1 style="margin:0; letter-spacing: 6px; font-size: 2.2rem; text-shadow: 0 5px 20px rgba(0,0,0,0.5);">✨ AESTHETIC DESIGNER</h1></div>
+
+<div class="main-app">
+    <div class="panel editor-panel">
+        <div class="field"><label>Lời chúc:</label><textarea id="inMsg" rows="2" oninput="liveUpdate()">Gửi lời chúc lung linh nhất đến bạn! 🌌</textarea></div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;" class="field">
+            <div><label>Phông chữ:</label>
+                <select id="inFont" onchange="liveUpdate()">
+                    <option value="'Dancing Script'">Dancing Script</option>
+                    <option value="'Pacifico'">Pacifico</option>
+                    <option value="'Satisfy'">Satisfy</option>
+                    <option value="'Great Vibes'">Great Vibes</option>
+                    <option value="'Lobster'">Lobster</option>
+                    <option value="'Alex Brush'">Alex Brush</option>
+                    <option value="'Playball'">Playball</option>
+                </select>
+            </div>
+            <div><label>Màu chữ:</label><input type="color" id="inColor" value="#2f3542" oninput="liveUpdate()"></div>
+        </div>
+
+        <div class="field"><label style="display: flex; align-items: center; gap: 5px; color:#87cefa; cursor:pointer;"><input type="checkbox" id="checkRainbow" onchange="liveUpdate()" style="width: auto;"> 🌈 Chữ đổi màu liên tục</label></div>
+
+        <div class="field">
+            <label>Chọn phông nền thiệp (Aesthetic Gradients):</label>
+            <div class="lib-grid">
+                <div class="bg-btn" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);" onclick="applyBgStyle('linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);" onclick="applyBgStyle('linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);" onclick="applyBgStyle('linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" onclick="applyBgStyle('linear-gradient(135deg, #667eea 0%, #764ba2 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);" onclick="applyBgStyle('linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%);" onclick="applyBgStyle('linear-gradient(to right, #fa709a 0%, #fee140 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);" onclick="applyBgStyle('linear-gradient(to right, #4facfe 0%, #00f2fe 100%)')"></div>
+                <div class="bg-btn" style="background: linear-gradient(to top, #30cfd0 0%, #330867 100%);" onclick="applyBgStyle('linear-gradient(to top, #30cfd0 0%, #330867 100%)')"></div>
+                <div class="bg-btn" style="background: white; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; color: black; font-size: 10px;" onclick="applyBgStyle('white')">Xóa</div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Thêm Sticker nhanh (Click để dán):</label>
+            <div class="lib-grid" style="max-height: 160px; overflow-y: auto;">
+                <span class="stk-item" onclick="addSticker('🌸', true)">🌸</span>
+                <span class="stk-item" onclick="addSticker('💖', true)">💖</span>
+                <span class="stk-item" onclick="addSticker('✨', true)">✨</span>
+                <span class="stk-item" onclick="addSticker('🧸', true)">🧸</span>
+                <span class="stk-item" onclick="addSticker('🍭', true)">🍭</span>
+                <span class="stk-item" onclick="addSticker('🌹', true)">🌹</span>
+                <span class="stk-item" onclick="addSticker('🍓', true)">🍓</span>
+                <span class="stk-item" onclick="addSticker('🌈', true)">🌈</span>
+                <span class="stk-item" onclick="addSticker('🐱', true)">🐱</span>
+                <span class="stk-item" onclick="addSticker('🐶', true)">🐶</span>
+                <span class="stk-item" onclick="addSticker('🐥', true)">🐥</span>
+                <span class="stk-item" onclick="addSticker('🦋', true)">🦋</span>
+                <span class="stk-item" onclick="addSticker('🌻', true)">🌻</span>
+                <span class="stk-item" onclick="addSticker('🍀', true)">🍀</span>
+                <span class="stk-item" onclick="addSticker('🎈', true)">🎈</span>
+                <span class="stk-item" onclick="addSticker('🎁', true)">🎁</span>
+                <span class="stk-item" onclick="addSticker('⭐', true)">⭐</span>
+                <span class="stk-item" onclick="addSticker('🍦', true)">🍦</span>
+                <span class="stk-item" onclick="addSticker('🦄', true)">🦄</span>
+                <span class="stk-item" onclick="addSticker('🐳', true)">🐳</span>
+            </div>
+        </div>
+
+        <div class="field"><label>Link Sticker (.png) hoặc Link Nhạc (.mp3):</label><input type="text" id="stickerUrl" placeholder="Dán link ảnh hoặc nhạc mp3 rồi nhấn Enter..." onkeydown="if(event.key==='Enter') handleExternalLink(this.value)"></div>
+        <div class="field"><label>Dán Link Ảnh nền riêng:</label><input type="text" id="onlineBg" oninput="updateBgAndMusic()" placeholder="Dán link ảnh nền tại đây..."></div>
+        <div class="field"><label>Link YouTube Nhạc:</label><input type="text" id="ytLink" placeholder="Dán link YouTube (mặc định Maroon 5)..."></div>
+        
+        <button class="btn" style="background:#ff1493" onclick="clearStickers()">🗑️ Xóa hết Sticker</button>
+        <button class="btn btn-share" onclick="createLink()">🔗 TẠO LINK GỬI THƯ & QR</button>
+        <div id="qr-area" style="display:none; text-align: center;"><div id="qrcode-box"></div></div>
+    </div>
+
+    <div class="panel" id="main-card-panel" style="text-align: center; overflow: hidden;">
+        <div id="final-card">
+            <div id="card-text" class="draggable"></div>
+            <div id="sticker-container"></div>
+        </div>
+        <button id="btn-create" class="btn" style="display:none; background:rgba(255,255,255,0.12); width:auto; margin-top:25px;" onclick="location.href=location.href.split('?')[0]">🎁 Tạo thiệp mới</button>
+    </div>
+</div>
+
+<script>
+    const finalCard = document.getElementById('final-card');
+    const stickerContainer = document.getElementById('sticker-container');
+    const cardText = document.getElementById('card-text');
+    const audioPlayer = document.getElementById('audio-player');
+    
+    // DANH SÁCH NHẠC MẶC ĐỊNH
+    const MUSIC_LIST = [
+        "https://files.catbox.moe/3r3gfm.m4a", 
+        "https://files.catbox.moe/r1tl3d.mp3",
+        "https://files.catbox.moe/0v2385.mp3"
+    ];
+    let musicIndex = 0;
+    let isCustomMp3 = false;
+    let currentBgStyle = "white"; 
+
+    // QUẢN LÝ NHẠC
+    function playMusic() {
+        audioPlayer.muted = true;
+        audioPlayer.play().then(() => {
+            setTimeout(() => { audioPlayer.muted = false; }, 100);
+        }).catch(err => {
+            // Nếu bị chặn, chờ tương tác người dùng
+            document.addEventListener('click', () => {
+                audioPlayer.play();
+                audioPlayer.muted = false;
+            }, { once: true });
+        });
+    }
+
+    function autoPlayDefault() {
+        if (isCustomMp3) return;
+        audioPlayer.src = MUSIC_LIST[musicIndex];
+        playMusic();
+    }
+
+    audioPlayer.onended = () => {
+        if (!isCustomMp3) {
+            musicIndex = (musicIndex + 1) % MUSIC_LIST.length;
+            autoPlayDefault();
+        }
+    };
+
+    function handleExternalLink(url) {
+        if (url.endsWith('.mp3') || url.endsWith('.m4a') || url.includes('catbox.moe')) {
+            isCustomMp3 = true;
+            audioPlayer.src = url;
+            playMusic();
+            alert("Đã nhận link nhạc MP3! Nhạc sẽ tự phát khi người nhận mở thư.");
+        } else {
+            addSticker(url, false);
+        }
+    }
+
+    // HIỆU ỨNG TRANG TRÍ
+    setInterval(() => {
+        if (!document.getElementById('env').classList.contains('opened') && document.getElementById('envelope-wrapper').style.display === 'flex') {
+            const s = document.createElement('div');
+            s.className = 'shimmer';
+            const rect = document.getElementById('env').getBoundingClientRect();
+            s.style.left = (rect.left + Math.random() * rect.width) + 'px';
+            s.style.top = (rect.top + rect.height / 2) + 'px';
+            s.style.setProperty('--rx', (Math.random() * 160 - 80) + 'px');
+            document.getElementById('envelope-wrapper').appendChild(s);
+            setTimeout(() => s.remove(), 2000);
+        }
+    }, 300);
+
+    for(let i=0; i<120; i++) {
+        const star = document.createElement('div'); star.className = 'star';
+        star.style.left = Math.random()*100+'%'; star.style.top = Math.random()*100+'%';
+        const size = Math.random()*3+'px'; star.style.width = size; star.style.height = size;
+        star.style.setProperty('--d', Math.random()*3+2+'s');
+        document.getElementById('stars').appendChild(star);
+    }
+
+    function spawnPetals(e) {
+        if (Math.random() > 0.88) {
+            const p = document.createElement('div'); p.className = 'mouse-petal';
+            p.innerText = ['🌸', '🌹', '🌺', '✨'][Math.floor(Math.random()*4)];
+            p.style.left = e.clientX + 'px'; p.style.top = e.clientY + 'px';
+            const drift = e.clientX > lastX ? 150 : -150;
+            p.style.setProperty('--mx', drift + 'px');
+            document.body.appendChild(p);
+            setTimeout(() => p.remove(), 2500);
+        }
+        lastX = e.clientX;
+    }
+    document.addEventListener('mousemove', spawnPetals);
+
+    function makeDraggable(el) {
+        el.onmousedown = function(e) {
+            if(document.body.classList.contains('view-mode')) return;
+            e.preventDefault(); e.stopPropagation();
+            let rect = finalCard.getBoundingClientRect();
+            document.onmousemove = (ev) => {
+                let xPercent = ((ev.clientX - rect.left) / rect.width) * 100;
+                let yPercent = ((ev.clientY - rect.top) / rect.height) * 100;
+                el.style.left = Math.max(0, Math.min(100, xPercent)) + '%';
+                el.style.top = Math.max(0, Math.min(100, yPercent)) + '%';
+            };
+            document.onmouseup = () => document.onmousemove = null;
+        };
+    }
+
+    function addSticker(data, isEmoji, x = 50, y = 50) {
+        const s = document.createElement('div');
+        s.className = 'sticker draggable ' + (isEmoji ? 'sticker-emoji' : '');
+        s.style.left = x + '%'; s.style.top = y + '%';
+        if (isEmoji) { s.innerText = data; } 
+        else { s.style.backgroundImage = "url('" + data + "')"; }
+        
+        s.dataset.value = data;
+        s.dataset.isEmoji = isEmoji;
+
+        if (!document.body.classList.contains('view-mode')) makeDraggable(s);
+        stickerContainer.appendChild(s);
+    }
+
+    function clearStickers() { stickerContainer.innerHTML = ''; }
+
+    // HÀM ÁP DỤNG PHÔNG NỀN (QUAN TRỌNG ĐỂ SỬA LỖI ĐỒNG BỘ)
+    function applyBgStyle(style) {
+        currentBgStyle = style; // Cập nhật biến toàn cục
+        finalCard.style.background = style;
+        finalCard.style.backgroundSize = "cover";
+        finalCard.style.backgroundPosition = "center";
+        
+        // Không xóa input onlineBg ở đây để tránh lỗi gõ phím
+    }
+
+    function updateBgAndMusic() { 
+        const url = document.getElementById('onlineBg').value;
+        if(url) {
+            currentBgStyle = "url('" + url + "')"; // Lưu đúng định dạng URL cho CSS
+            finalCard.style.background = currentBgStyle;
+            finalCard.style.backgroundSize = "cover";
+            finalCard.style.backgroundPosition = "center";
+        }
+    }
+
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    window.onload = () => {
+        const params = new URLSearchParams(window.location.search);
+        if(params.has('msg')) {
+            document.getElementById('envelope-wrapper').style.display = 'flex';
+            
+            // 1. Đồng bộ phông nền ngay lập tức
+            if(params.has('obg')) {
+                const bg = decodeURIComponent(params.get('obg'));
+                applyBgStyle(bg); // Sử dụng hàm chuẩn hóa
+            }
+
+            // 2. Đồng bộ Sticker
+            if(params.has('stk')) {
+                const stickers = decodeURIComponent(params.get('stk')).split('|');
+                stickers.forEach(str => {
+                    if(!str) return;
+                    const parts = str.split(':::');
+                    if(parts.length === 4) {
+                        addSticker(parts[0], parts[1] === 'true', parts[2], parts[3]);
+                    }
+                });
+            }
+
+            // 3. Đồng bộ thuộc tính chữ
+            document.getElementById('inMsg').value = decodeURIComponent(params.get('msg'));
+            document.getElementById('inColor').value = '#' + params.get('clr');
+            document.getElementById('inFont').value = decodeURIComponent(params.get('fnt'));
+            if(params.get('rb') === '1') document.getElementById('checkRainbow').checked = true;
+            if(params.has('tx')) cardText.style.left = params.get('tx') + '%';
+            if(params.has('ty')) cardText.style.top = params.get('ty') + '%';
+            
+            // 4. Xử lý Nhạc MP3 hoặc YouTube
+            if(params.has('yt')) {
+                const musicVal = decodeURIComponent(params.get('yt'));
+                if (musicVal.startsWith('http')) {
+                    isCustomMp3 = true;
+                    audioPlayer.src = musicVal;
+                    audioPlayer.load();
+                } else {
+                    window.ytId = musicVal; // Dành cho YouTube API
+                }
+            }
+            
+            liveUpdate(true);
+            document.getElementById('btn-create').style.display = 'inline-block';
+        } else {
+            // Chế độ người tạo
+            document.getElementById('envelope-wrapper').style.display = 'none';
+            makeDraggable(cardText); 
+            liveUpdate(false);
+            autoPlayDefault(); // Tự động phát nhạc mặc định
+        }
+    };
+
+    function liveUpdate(isTyping = false) {
+        const msg = document.getElementById('inMsg').value;
+        cardText.style.color = document.getElementById('inColor').value;
+        cardText.style.fontFamily = document.getElementById('inFont').value;
+        if(document.getElementById('checkRainbow').checked) cardText.classList.add('rainbow-text');
+        else cardText.classList.remove('rainbow-text');
+        if (isTyping) {
+            let i = 0; cardText.innerHTML = "";
+            let t = setInterval(() => {
+                if(i < msg.length) { cardText.innerHTML += msg[i] === '\n' ? '<br>' : msg[i]; i++; }
+                else clearInterval(t);
+            }, 60);
+        } else { cardText.innerHTML = msg.replace(/\n/g, '<br>'); }
+    }
+
+    function openEnvelope() {
+        document.getElementById('env').classList.add('opened');
+        document.getElementById('aura').style.display = 'none';
+        document.getElementById('ins-text').style.display = 'none';
+        
+        let vId = window.ytId;
+        if(vId) {
+            new YT.Player('yt-player', { height: '0', width: '0', videoId: vId, playerVars: { 'autoplay': 1, 'loop': 1, 'playlist': vId }, events: { 'onReady': (e) => e.target.playVideo() } });
+        } else {
+            // Nếu có link MP3 riêng hoặc nhạc mặc định
+            playMusic();
+        }
+        setTimeout(() => { document.body.classList.add('envelope-done'); liveUpdate(true); }, 1500);
+    }
+
+    function createLink() {
+        const msg = encodeURIComponent(document.getElementById('inMsg').value);
+        const clr = document.getElementById('inColor').value.replace('#','');
+        const fnt = encodeURIComponent(document.getElementById('inFont').value);
+        
+        // Sửa lỗi: Đảm bảo biến currentBgStyle chứa đúng giá trị CSS
+        const obg = encodeURIComponent(currentBgStyle);
+        
+        const rb = document.getElementById('checkRainbow').checked ? '1' : '0';
+        
+        // Kiểm tra xem là link mp3 hay link youtube
+        let musicParam = ""; 
+        const ytUrl = document.getElementById('ytLink').value;
+        if(ytUrl.includes('v=')) musicParam = ytUrl.split('v=')[1].split('&')[0];
+        else if(ytUrl.includes('be/')) musicParam = ytUrl.split('be/')[1].split('?')[0];
+        else if(isCustomMp3) musicParam = encodeURIComponent(audioPlayer.src); // Lưu link MP3 nếu có
+
+        const tx = parseFloat(cardText.style.left) || 50; 
+        const ty = parseFloat(cardText.style.top) || 50;
+        
+        let stkArr = [];
+        document.querySelectorAll('.sticker').forEach(s => {
+            stkArr.push(`${s.dataset.value}:::${s.dataset.isEmoji}:::${parseFloat(s.style.left)}:::${parseFloat(s.style.top)}`);
+        });
+        const stkData = encodeURIComponent(stkArr.join('|'));
+        
+        const url = `${window.location.href.split('?')[0]}?msg=${msg}&clr=${clr}&fnt=${fnt}&obg=${obg}&yt=${musicParam}&tx=${tx}&ty=${ty}&rb=${rb}&stk=${stkData}`;
+        
+        document.getElementById('qr-area').style.display = 'block';
+        document.getElementById('qrcode-box').innerHTML = "";
+        new QRCode(document.getElementById('qrcode-box'), { text: url, width: 160, height: 160 });
+        navigator.clipboard.writeText(url); 
+        alert("Đã copy link thành công! Nhạc và nền đã được đồng bộ.");
+    }
+</script>
+</body>
+</html>
